@@ -17,3 +17,116 @@
 @media(max-width:800px){.container{width:min(100% - 36px,680px)}.site-nav,.nav-badge{display:none}.nav-row{justify-content:space-between;height:64px}.hero{margin-top:10px;grid-template-columns:1fr;min-height:auto}.hero-copy{padding:42px 33px 27px}.hero h1{font-size:clamp(44px,10vw,65px);letter-spacing:-3.2px;margin:29px 0 14px}.hero-copy>p{font-size:14px}.hero-display{min-height:325px}.hero-sculpture{height:345px;width:100%}.hero-floating-top{top:9%;right:7%}.hero-floating-bottom{bottom:12%;left:9%}.hero-foot{margin-top:12px}.benefits{padding:22px 0}.benefits>div{gap:9px}.benefits strong{font-size:11px}.benefits small{font-size:10px}.benefit-icon{width:34px;height:34px;font-size:19px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product-image{min-height:205px}.product-info{padding:15px}.product-info h3{font-size:18px}.product-desc{font-size:12px}.custom-content{padding:45px 35px}.custom-sticker{display:none}.section-side{display:none}.closing{flex-wrap:wrap}.closing strong{width:100%}.steps{gap:13px}}
 @media(max-width:500px){.announcement{font-size:8px;letter-spacing:1px;gap:7px}.container{width:calc(100% - 26px)}.brand{font-size:24px}.hero{border-radius:16px}.hero-copy{padding:34px 23px 20px}.hero-kicker{font-size:8px;letter-spacing:.8px}.tiny-star{font-size:15px}.hero h1{font-size:clamp(38px,11vw,52px);letter-spacing:-2.5px}.hero-buttons{margin:14px 0 22px;gap:8px}.button{font-size:12px;padding:12px 15px;gap:14px}.hero-display{min-height:275px}.hero-sculpture{height:305px}.hero-floating-top{font-size:8px;padding:10px;right:5%}.hero-floating-bottom{font-size:8px;padding:10px}.benefits{grid-template-columns:1fr 1fr;gap:15px}.benefits>div:nth-child(2){border:0}.benefits>div:last-child{display:none}.products-section{padding-top:63px}.section-heading h2{font-size:39px;letter-spacing:-2.3px}.toolbar{align-items:start;flex-direction:column;margin:27px 0 16px}.filters{width:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}.filters::-webkit-scrollbar{display:none}.filter{padding:10px 13px;font-size:11px}.results{display:none}.product-grid{gap:9px}.product-card{border-radius:14px}.product-image{min-height:154px}.product-image svg{max-height:138px;width:87%}.product-tag{font-size:9px;padding:6px 8px;top:10px;left:9px}.product-info{padding:12px}.product-info h3{font-size:15px;min-height:38px}.product-cat{font-size:9px}.product-desc{font-size:11px;min-height:50px;margin-bottom:14px}.product-price{font-size:18px}.add-button{width:35px;height:35px;font-size:22px}.custom-band{margin-top:70px;border-radius:16px}.custom-content{padding:37px 24px}.custom-content h2{font-size:40px;letter-spacing:-2px}.how{padding:80px 0 65px}.steps{grid-template-columns:1fr;gap:9px;margin-top:25px}.steps article{padding:13px 0 10px;display:grid;grid-template-columns:50px 1fr;grid-template-areas:'number title' 'glyph desc';gap:0 10px}.step-num{grid-area:number;padding-top:5px}.step-glyph{grid-area:glyph;font-size:31px;margin:0}.steps h3{grid-area:title;font-size:20px}.steps p{grid-area:desc;margin:0 0 12px}.closing{gap:12px;padding-bottom:65px}.closing strong{font-size:39px}.footer-inner{flex-direction:column;align-items:flex-start}.drawer{padding:20px}.drawer>h2{font-size:27px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}@keyframes float{0%,100%{transform:rotate(-9deg) translateY(5px)}50%{transform:rotate(-7deg) translateY(-14px)}}
+
+
+/* LayerLab Sevilla · imágenes ilustradas, búsqueda, espacio local y modo oscuro */
+.product-illustration{display:block;width:86%;height:86%;max-height:238px;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(10px 13px 7px #49386b24);transition:transform .3s ease}
+.product-card:hover .product-illustration{transform:translateY(-7px) rotate(-2deg)}
+.drawer-thumb .product-illustration{width:76px;height:68px;max-height:68px;filter:none}
+.preview-card .product-illustration{width:220px;height:174px;max-height:none;filter:drop-shadow(9px 13px 8px #48346831)}
+.hero-display{background:linear-gradient(160deg,#d5c0fd 0%,#e3b1d3 54%,#ffd59d 100%)}
+.hero-display:before{content:"";position:absolute;bottom:-1px;inset-inline:0;height:70%;background:url("./assets/sevilla-skyline.svg") center bottom / cover no-repeat;opacity:.88;z-index:0}
+.hero-products{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero-products img{position:absolute;display:block;object-fit:contain;filter:drop-shadow(15px 28px 12px #3a245c44);animation:float 7s ease-in-out infinite}
+.hero-figure{width:65%;height:68%;left:19%;top:11%;z-index:3}
+.hero-key{width:41%;height:42%;left:1%;top:51%;z-index:4;transform:rotate(-12deg);animation:none!important}
+.hero-gaming{width:42%;height:39%;right:-5%;top:55%;z-index:5;transform:rotate(9deg);animation:none!important}
+.hero-floating{z-index:6}
+.hero-floating-top{right:6%;top:8%}
+.hero-floating-bottom{left:9%;bottom:8%}
+.hero-index{z-index:6}
+.catalog-search{display:flex;align-items:center;border:1px solid #d9d6db;background:#fff;border-radius:30px;min-height:41px;padding:0 12px;gap:6px;margin-left:auto;flex-shrink:0}
+.catalog-search span{font-size:25px;line-height:1;color:#7659a7}
+.catalog-search input{border:0;background:transparent;min-width:0;width:142px;outline:0;color:#262132;font-size:12px}
+.catalog-search input::placeholder{color:#79747c}
+.catalog-search:focus-within{outline:2px solid #986de4;outline-offset:2px}
+.results{margin-left:8px}
+.no-results{grid-column:1/-1;text-align:center;padding:50px 25px;background:#fff;border:1px solid #e6e3e7;border-radius:18px}
+.no-results strong{font:700 23px 'Space Grotesk'}
+.no-results p{font-size:13px;color:#73717a}
+.figure-guide{background:#f4efff;color:#554279;border-left:3px solid #815dd9;padding:14px;border-radius:0 9px 9px 0;margin:14px 0 8px}
+.figure-guide strong{font-size:13px}.figure-guide p{font-size:12px;line-height:1.6;margin:6px 0 0}
+.sevilla-note{margin-top:44px;display:flex;align-items:center;gap:32px;border-radius:20px;background:#e9e0fc;padding:38px 44px;position:relative;overflow:hidden}
+.sevilla-note .eyebrow{margin-bottom:11px}
+.sevilla-note h2{font:700 clamp(28px,3vw,42px)/1.13 'Space Grotesk';letter-spacing:-1.9px;margin:0}
+.sevilla-note p:not(.eyebrow){font-size:13px;line-height:1.7;color:#5f5868;max-width:660px;margin-bottom:0}
+.sevilla-mark{font-size:94px;line-height:1;color:#8a62dd;transform:rotate(-15deg);flex:none}
+.sevilla-note .button{margin-left:auto;white-space:nowrap;flex:none}
+@media(max-width:1150px){.toolbar{flex-wrap:wrap}.results{display:none}.catalog-search{margin-left:auto}.filters{flex:1;min-width:0}}
+@media(max-width:800px){.hero-figure{top:8%;height:69%}.hero-key{top:53%;left:7%;width:37%}.hero-gaming{top:55%;right:0;width:36%}.sevilla-note{flex-wrap:wrap;gap:14px;padding:30px}.sevilla-mark{font-size:70px}.sevilla-note .button{margin-left:0}.catalog-search{margin-left:0}}
+@media(max-width:500px){.hero-display:before{height:80%}.hero-figure{left:14%;top:4%;width:70%;height:75%}.hero-key{left:-3%;top:53%;width:48%;height:47%}.hero-gaming{right:-5%;top:57%;width:47%;height:40%}.hero-floating-top{top:5%;right:4%}.hero-floating-bottom{bottom:7%}.product-illustration{width:91%;height:88%;max-height:155px}.drawer-thumb .product-illustration{width:76px;max-height:68px}.preview-card .product-illustration{width:205px;height:170px;max-height:170px}.toolbar{flex-wrap:wrap;align-items:center;gap:9px}.filters{flex:1 0 100%}.catalog-search{width:100%;margin:0}.catalog-search input{flex:1;width:auto}.sevilla-note{padding:25px;gap:8px}.sevilla-mark{font-size:50px}.sevilla-note h2{font-size:31px}.sevilla-note .button{margin-top:8px}.no-results{padding:35px 14px}}
+@media(prefers-color-scheme:dark){
+ :root{color-scheme:dark;--ink:#f6f4fb;--ink-soft:#d1ccd9;--muted:#b8b2c4;--paper:#13141b;--white:#1e202a;--line:#363441;--violet-dark:#c7a8ff;--violet:#ad8ae7}
+ body{background:var(--paper);color:var(--ink)}
+ .announcement{background:#080910;color:#d7d5e0}
+ .site-header{background:#13141bf2;border-color:#2c2b36}
+ .brand-mark{background:#d3f77b;color:#1a1c23}
+ .brand-mark span{color:#7450c9}
+ .nav-badge,.site-nav a{color:#d0cbd8}
+ .cart-count{background:#d6fb63;color:#17181d;border-color:var(--paper)}
+ .hero{background:#22212c}
+ .hero-kicker{color:#d3c5f0}
+ .hero-copy>p{color:#d1cbd7}
+ .hero h1 em{color:#d5bbff}
+ .button-dark{background:#d6fb63;color:#1b1c21}
+ .button-outline{color:#efecf6;border-color:#686071;background:#2b29352b}
+ .hero-foot{color:#b0a7bb}.hero-foot strong{color:#f0eaf8}
+ .avatar-stack span{border-color:#22212c}
+ .hero-display{background:linear-gradient(160deg,#634b94 0%,#824f7c 53%,#aa725b 100%)}
+ .hero-display:before{opacity:.65}
+ .hero-floating{background:#282635;color:#f3edf9;border-color:#736187}
+ .hero-floating-bottom .floating-square{background:#d6fb63}
+ .benefits>div:not(:last-child){border-color:#363441}
+ .benefit-icon{background:#322946;color:#d7bbff}
+ .benefits strong{color:#f5f2fb}.benefits small{color:#b3aab9}
+ .section-heading h2{color:#f7f5fb}.soft-ink{color:#beb5cd}
+ .section-side{color:#b9b1c1}
+ .filter{color:#ccc3d4;border-color:#554f61;background:#24222c}
+ .filter.active{background:#d6fb63;border-color:#d6fb63;color:#18171b}
+ .results,.catalog-note{color:#b5b0bc}
+ .product-card{background:#20212b;border-color:#383743}
+ .product-cat{color:#d4baff}
+ .product-info h3{color:#f7f4fa}
+ .product-desc{color:#c3becc}
+ .product-bottom{border-color:#3c3a44}
+ .product-price small{color:#afa7b7}
+ .add-button{background:#c6a8ff;color:#201929}
+ .add-button:hover{background:#d6fb63}
+ .custom-band{background:#251f33}
+ .custom-content p:not(.eyebrow){color:#d0c8d9}
+ .sevilla-note{background:#29233b}
+ .sevilla-mark{color:#bc9cfa}
+ .sevilla-note h2{color:#f9f2ff}
+ .sevilla-note p:not(.eyebrow){color:#c7bfd3}
+ .sevilla-note .button-outline{background:#332a48}
+ .steps article{border-color:#47414c}
+ .steps p{color:#bcb5c5}
+ .closing{border-color:#45404e}
+ .closing strong span{color:#d9b5ff}
+ .footer{background:#0d0f16}
+ .footer .brand-mark{background:#d6fb63}
+ .footer .brand-mark span{color:#7046bb}
+ .drawer{background:#1a1b25;color:#f4f1fa}
+ .drawer>h2{color:#faf7ff}
+ .close-button{background:#383440;color:#f8f4ff}
+ .drawer-line{border-color:#3b3946}
+ .drawer-line-content p,.helper,.empty-state,.char-count,.muted-small{color:#bcb4c4}
+ .stepper{border-color:#514a59}.stepper button{background:#332e40;color:#f6eef9}
+ .line-remove{color:#d4b7ff}
+ .field{background:#272833;border-color:#57505f;color:#f6f2fa}
+ .field::placeholder{color:#a9a2b4}
+ .field:disabled{background:#20212b}
+ .drawer-primary{background:#d6fb63;color:#1b1b21}
+ .drawer-secondary{background:#373048;color:#e9d9ff}
+ .cart-total{color:#f6f2fb}
+ .drawer-summary{background:#2a2735;color:#f7f1ff}
+ .notice{background:#302c3d;color:#d8cee6;border-color:#b595ff}
+ .figure-guide{background:#30283d;color:#ebdfff}
+ .catalog-search{background:#262631;border-color:#5a5563}
+ .catalog-search span{color:#c8a9ff}
+ .catalog-search input{color:#faf6ff}
+ .catalog-search input::placeholder{color:#c0b7cb}
+ .no-results{background:#22222d;border-color:#44404f}
+ .no-results p{color:#beb7c7}
+ .toast{background:#d6fb63;color:#17181d}
+}
