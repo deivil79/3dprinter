@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#101116">
-  <meta name="description" content="LayerLab: accesorios, gadgets y piezas únicas impresas en 3D. Descubre nuestros diseños y prepara tu encargo a medida.">
+  <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#101116" media="(prefers-color-scheme: dark)"><meta name="color-scheme" content="light dark">
+  <meta name="description" content="LayerLab Sevilla: impresión 3D para estudiantes. Gadgets de clase, gaming, deporte, recuerdos sevillanos y figuras personalizadas.">
   <meta property="og:title" content="LayerLab — Ideas que toman forma">
-  <meta property="og:description" content="Gadgets útiles, regalos únicos y piezas 3D personalizadas.">
+  <meta property="og:description" content="Gadgets para el instituto, el gaming y la vida en Sevilla. Figuras y detalles únicos impresos en 3D.">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="./icon.svg">
   <link rel="manifest" href="./manifest.webmanifest">
@@ -16,48 +16,41 @@
 </head>
 <body>
 <a class="skip-link" href="#productos">Saltar al catálogo</a>
-<div class="announcement"><span class="announcement-dot"></span> MINI OBJETOS. GRANDES IDEAS. <span class="announcement-divider">✳</span> HECHOS CAPA A CAPA</div>
+<div class="announcement"><span class="announcement-dot"></span> DISEÑOS PARA ESTUDIANTES <span class="announcement-divider">✳</span> HECHOS EN SEVILLA</div>
 <header class="site-header">
   <div class="container nav-row">
     <a href="#inicio" class="brand" aria-label="LayerLab, inicio"><span class="brand-mark">L<span>✳</span></span><span>layer<span class="brand-dot">lab</span><span class="brand-period">.</span></span></a>
     <nav class="site-nav" aria-label="Navegación principal"><a href="#productos">Explorar diseños</a><a href="#como-funciona">Cómo funciona</a><a href="#a-medida">A medida</a></nav>
-    <div class="nav-actions"><span class="nav-badge">100% creatividad</span><button class="cart-open icon-action" id="openCart" type="button" aria-label="Abrir cesta de encargos"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span class="cart-count" id="cartCount" aria-live="polite">0</span></button></div>
+    <div class="nav-actions"><span class="nav-badge">✳ Desde Sevilla</span><button class="cart-open icon-action" id="openCart" type="button" aria-label="Abrir cesta de encargos"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span class="cart-count" id="cartCount" aria-live="polite">0</span></button></div>
   </div>
 </header>
 <main id="inicio">
   <section class="hero container" aria-labelledby="hero-title">
     <div class="hero-copy">
-      <div class="hero-kicker"><span class="status-pulse"></span> DISEÑADO PARA TU DÍA A DÍA <span class="tiny-star">✦</span></div>
-      <h1 id="hero-title">Las buenas ideas<br><em>se imprimen.</em></h1>
-      <p>Gadgets originales, accesorios que sí vas a usar y regalos con tu estilo. Una idea, mil posibilidades, capa a capa.</p>
+      <div class="hero-kicker"><span class="status-pulse"></span> ESTUDIANTES · SEVILLA · IMPRESIÓN 3D <span class="tiny-star">✦</span></div>
+      <h1 id="hero-title">Tu rollo.<br><em>En 3D.</em></h1>
+      <p>Del insti a la Alameda, del patio a la cancha: gadgets para estudiar, jugar y regalar, con un guiño a Sevilla. Diseñados con imaginación y hechos por encargo.</p>
       <div class="hero-buttons"><a class="button button-dark" href="#productos">Ver diseños <span>↗</span></a><a class="button button-outline" href="#a-medida">Tengo una idea <span>→</span></a></div>
-      <div class="hero-foot"><div class="avatar-stack" aria-hidden="true"><span>✳</span><span>◇</span><span>✦</span></div><span>Diseñado, impreso y personalizado<br><strong>con mucho mimo.</strong></span></div>
+      <div class="hero-foot"><div class="avatar-stack" aria-hidden="true"><span>✳</span><span>◇</span><span>✦</span></div><span>Diseños con personalidad<br><strong>directamente desde Sevilla.</strong></span></div>
     </div>
-    <div class="hero-display" role="img" aria-label="Ilustración original de un gadget impreso en 3D en forma de estrella articulada">
+    <div class="hero-display" role="img" aria-label="Composición gráfica de una figura coleccionable, un llavero y un accesorio de videojuego inspirados en Sevilla">
       <div class="hero-grid"></div><div class="hero-halo"></div>
-      <span class="hero-floating hero-floating-top">NO ES MAGIA.<br>ES IMPRESIÓN 3D.</span>
-      <svg class="hero-sculpture" viewBox="0 0 560 540" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-       <defs><linearGradient id="heroMain" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e4dcff"/><stop offset=".4" stop-color="#b996ff"/><stop offset="1" stop-color="#7552ea"/></linearGradient><linearGradient id="heroEdge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6238c6"/><stop offset="1" stop-color="#3b1e8d"/></linearGradient><filter id="heroShadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="18" dy="28" stdDeviation="18" flood-color="#1f123e" flood-opacity=".25"/></filter></defs>
-       <g filter="url(#heroShadow)" transform="translate(280 264) rotate(-18)">
-       <path d="M0 -196 L49 -99 L158 -144 L129 -37 L231 13 L123 55 L139 168 L35 115 L0 216 L-35 115 L-139 168 L-123 55 L-231 13 L-129 -37 L-158 -144 L-49 -99Z" transform="translate(15 27)" fill="url(#heroEdge)"/>
-       <path d="M0 -196 L49 -99 L158 -144 L129 -37 L231 13 L123 55 L139 168 L35 115 L0 216 L-35 115 L-139 168 L-123 55 L-231 13 L-129 -37 L-158 -144 L-49 -99Z" fill="url(#heroMain)" stroke="#f1ebff" stroke-width="5"/>
-       <circle r="69" fill="#f3eaff" stroke="#7856da" stroke-width="13"/><circle r="33" fill="#b394ff"/><circle cx="-11" cy="-12" r="12" fill="#e9daff" opacity=".8"/>
-       </g><path d="M82 420l11 29 30 10-30 10-11 29-11-29-30-10 30-10Z" fill="#d6fb63"/><circle cx="475" cy="101" r="12" fill="#d6fb63"/>
-      </svg>
-      <span class="hero-floating hero-floating-bottom"><span class="floating-square"></span> OBJETOS CON PERSONALIDAD <span>↗</span></span>
+      <span class="hero-floating hero-floating-top">SEVILLA EN 3D.<br>Y EN TU MOCHILA.</span>
+      <div class="hero-products" aria-hidden="true"><img class="hero-figure" src="./assets/funko.svg" alt="" decoding="async" fetchpriority="high"><img class="hero-key" src="./assets/key.svg" alt="" decoding="async"><img class="hero-gaming" src="./assets/gamepad.svg" alt="" decoding="async"></div>
+      <span class="hero-floating hero-floating-bottom"><span class="floating-square"></span> EDICIÓN ESTUDIANTES <span>↗</span></span>
       <div class="hero-index">01 / ∞</div>
     </div>
   </section>
-  <section class="benefits container" aria-label="Ventajas"><div><span class="benefit-icon">✦</span><span><strong>Diseños originales</strong><small>Fuera de lo típico</small></span></div><div><span class="benefit-icon">◈</span><span><strong>Personaliza a tu gusto</strong><small>Colores, nombres y más</small></span></div><div><span class="benefit-icon">↗</span><span><strong>Hecho por encargo</strong><small>Sin producción en masa</small></span></div></section>
-  <section class="products-section container" id="productos" aria-labelledby="productsTitle"><div class="section-heading"><div><p class="eyebrow"><span class="circle-star">✳</span> EL CATÁLOGO</p><h2 id="productsTitle">Pequeños objetos.<br><span class="soft-ink">Grandes obsesiones.</span></h2></div><p class="section-side">Útiles. Personalizables. Un poco inesperados.<br>Encuentra tu próximo favorito.</p></div>
-   <div class="toolbar"><div id="filters" class="filters" role="group" aria-label="Filtrar productos"></div><span id="results" class="results" aria-live="polite"></span></div><div id="productGrid" class="product-grid"></div>
-   <p class="catalog-note">✳ Diseños y precios orientativos de demostración. La disponibilidad y el precio final se confirman antes del encargo.</p>
+  <section class="benefits container" aria-label="Ventajas"><div><span class="benefit-icon">✦</span><span><strong>De Sevilla, con creatividad</strong><small>Con inspiración local</small></span></div><div><span class="benefit-icon">◈</span><span><strong>Para tu insti y tus hobbies</strong><small>Clase, deporte y gaming</small></span></div><div><span class="benefit-icon">↗</span><span><strong>Tu propio diseño</strong><small>Pide color, nombre y detalles</small></span></div></section>
+  <section class="products-section container" id="productos" aria-labelledby="productsTitle"><div class="section-heading"><div><p class="eyebrow"><span class="circle-star">✳</span> EL CATÁLOGO</p><h2 id="productsTitle">Para el insti.<br><span class="soft-ink">Y para todo lo demás.</span></h2></div><p class="section-side">Estudiar, jugar, crear, compartir.<br>Todo con un toque de Sevilla.</p></div>
+   <div class="toolbar"><div id="filters" class="filters" role="group" aria-label="Filtrar productos"></div><label class="catalog-search" for="catalogSearch"><span aria-hidden="true">⌕</span><input id="catalogSearch" type="search" placeholder="Buscar un gadget…" aria-label="Buscar productos"></label><span id="results" class="results" aria-live="polite"></span></div><div id="productGrid" class="product-grid"></div>
+   <p class="catalog-note">✳ Imágenes conceptuales generadas para ilustrar las ideas: no son fotos de piezas fabricadas. Precios orientativos. Confirmamos disponibilidad y presupuesto antes de imprimir.</p>
   </section>
-  <section class="custom-band container" id="a-medida"><div class="custom-decor" aria-hidden="true">✳</div><div class="custom-content"><p class="eyebrow">EL ESTUDIO DE IDEAS</p><h2>¿Y si imprimimos <em>tu idea?</em></h2><p>Un soporte especial, un regalo con nombre, una pieza que no encuentras… Cuéntanos qué imaginas y preparamos una propuesta.</p><button class="button button-lime" id="customOpen" type="button">Diseñar algo único <span>↗</span></button></div><div class="custom-sticker" aria-hidden="true">ONE OF<br>A KIND <span>✦</span></div></section>
-  <section class="how container" id="como-funciona"><div class="section-heading"><div><p class="eyebrow">EN TRES PASOS</p><h2>De tu cabeza<br><span class="soft-ink">a tus manos.</span></h2></div></div><div class="steps"><article><span class="step-num">01</span><div class="step-glyph">◇</div><h3>Elige o imagina</h3><p>Explora los diseños o propón uno totalmente tuyo.</p></article><article><span class="step-num">02</span><div class="step-glyph">◎</div><h3>Cuéntanos los detalles</h3><p>Color, texto y cantidad. Prepara tu solicitud y compártela.</p></article><article><span class="step-num">03</span><div class="step-glyph">✳</div><h3>¡A imprimir!</h3><p>Una vez confirmado el encargo, toca convertirlo en realidad.</p></article></div></section>
+  <section class="custom-band container" id="a-medida"><div class="custom-decor" aria-hidden="true">✳</div><div class="custom-content"><p class="eyebrow">EL ESTUDIO DE IDEAS</p><h2>¿Tienes una idea <em>muy tuya?</em></h2><p>Desde un accesorio para tu mochila hasta una figura cabezona personalizada, estilo coleccionable pop. Cuéntanos tu idea y la convertimos en una solicitud de presupuesto.</p><button class="button button-lime" id="customOpen" type="button">Diseñar algo único <span>↗</span></button></div><div class="custom-sticker" aria-hidden="true">MADE IN<br>SEVILLA <span>✦</span></div></section>
+  <section class="sevilla-note container" aria-labelledby="sevillaTitle"><div class="sevilla-mark" aria-hidden="true">✳</div><div><p class="eyebrow">HECHO CON ACENTO SEVILLANO</p><h2 id="sevillaTitle">Entre apuntes, canastas<br>y tardes por Triana.</h2><p>La Giralda, los azulejos, la Feria, el fútbol y las tardes con amigos se cuelan en nuestros diseños. Cosas pequeñas para la vida de todos los días en Sevilla.</p></div><a href="#productos" class="button button-outline">Descubrir la colección ↗</a></section><section class="how container" id="como-funciona"><div class="section-heading"><div><p class="eyebrow">EN TRES PASOS</p><h2>Del boceto<br><span class="soft-ink">a tu mochila.</span></h2></div></div><div class="steps"><article><span class="step-num">01</span><div class="step-glyph">◇</div><h3>Elige o imagina</h3><p>Elige algo para clase, deporte o gaming, o imagina una figura a tu estilo.</p></article><article><span class="step-num">02</span><div class="step-glyph">◎</div><h3>Cuéntanos los detalles</h3><p>Elige el color, tu nombre y los detalles. Comparte tu idea para pedir presupuesto.</p></article><article><span class="step-num">03</span><div class="step-glyph">✳</div><h3>¡A imprimir!</h3><p>Tras acordar precio y detalles, empezamos a imprimir en Sevilla.</p></article></div></section>
   <section class="closing container"><p>¿ALGO MÁS QUE IMAGINAR?</p><strong>Hazlo <span>real.</span> ✳</strong><a href="#productos" class="button button-dark">Explorar el catálogo ↗</a></section>
 </main>
-<footer class="footer"><div class="container footer-inner"><a href="#inicio" class="brand"><span class="brand-mark">L<span>✳</span></span><span>layer<span class="brand-dot">lab</span><span class="brand-period">.</span></span></a><p>Pequeño estudio de impresión 3D.<br>Grandes ganas de crear.</p><div><span class="footer-label">UNA IDEA DE TALLER</span><small>Web de muestra · Sin cobros ni cuentas · 2026</small></div></div></footer>
+<footer class="footer"><div class="container footer-inner"><a href="#inicio" class="brand"><span class="brand-mark">L<span>✳</span></span><span>layer<span class="brand-dot">lab</span><span class="brand-period">.</span></span></a><p>Diseños 3D desde Sevilla.<br>Para clase, ocio y todo lo que imagines.</p><div><span class="footer-label">UNA IDEA DE TALLER</span><small>Web de muestra · Sin cobros ni cuentas · Sevilla, 2026</small></div></div></footer>
 <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true" tabindex="-1">
  <div class="drawer-top"><p class="eyebrow" id="drawerEyebrow">TU SELECCIÓN</p><button class="close-button" id="closeDrawer" type="button" aria-label="Cerrar panel">✕</button></div>
