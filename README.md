@@ -1,40 +1,47 @@
-# LayerLab — tienda de impresión 3D
+# LayerLab ✳ — una tienda 3D que funciona en GitHub Pages
 
-Tienda **mobile first** para pequeñas piezas, regalos y encargos impresos en 3D. Proyecto Next.js, Supabase Auth (Google), PostgreSQL/Supabase, Stripe Checkout y PayPal Checkout.
+Web de demostración **estática, mobile-first, sin framework, sin compilación y sin claves privadas**. Inspirada en la arquitectura de la PWA INNOPAT: HTML + CSS + JavaScript.
 
-## Arranque
+## Ver la web
 
-```bash
-npm install
-cp .env.example .env.local
-npm run dev
+**https://deivil79.github.io/3dprinter/**
+
+> La dirección solo estará accesible cuando GitHub Pages esté activado en **Settings → Pages**. Si se publica la rama `main` con carpeta `/docs`, la web se muestra directamente en la URL anterior. Si se publica `main` desde `/(root)`, el archivo raíz `index.html` redirige a `/docs/`.
+
+## Qué hace
+
+- Catálogo visual de seis productos **ilustrativos** con arte vectorial original.
+- Filtros por categoría y tarjetas responsive.
+- Configurador de color, cantidad y texto personalizado.
+- Bolsa con subtotal orientativo y persistencia local (`localStorage`).
+- Generación de un **mensaje de solicitud de encargo**, que la persona puede copiar o compartir mediante la función nativa del móvil.
+- Formulario de ideas a medida que **prepara un mensaje** (no lo transmite automáticamente).
+- Manifest básico para añadir la página a la pantalla de inicio.
+
+## Qué NO hace
+
+No existe servidor, cuentas de Google, registro de clientes, pasarela de pago, panel de administración, seguimiento real de pedidos ni envío automático de mensajes. Se han retirado deliberadamente. **No se cobran pagos ni se formalizan compras** desde la web.
+
+## Estructura
+
+```
+index.html            # Redirección para Pages desde /(root)
+docs/
+  index.html          # App estática
+  styles.css          # Diseño responsive
+  app.js              # Catálogo e interacciones
+  icon.svg            # Favicon
+  manifest.webmanifest
 ```
 
-Abre http://localhost:3000. El catálogo y carrito funcionan sin cuentas externas; autenticación, encargos, pedidos y cobros requieren configurar variables.
+Abre `docs/index.html` directamente en el navegador, o ejecuta `python3 -m http.server 8000` desde la raíz y visita `http://localhost:8000/docs/`.
 
-## Configuración
-1. Crear proyecto Supabase y ejecutar `supabase/schema.sql` en SQL Editor. Configurar Google como proveedor OAuth en Supabase y el redirect HTTPS para producción. La URL de retorno de la app es `https://TU_DOMINIO/auth/callback`. Añadir tanto localhost como el dominio en Auth URL Configuration.
-2. Rellenar `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` (¡solo servidor!), `ADMIN_EMAILS` (emails separados por coma), `NEXT_PUBLIC_SITE_URL`.
-3. Crear cuenta Stripe y configurar `STRIPE_SECRET_KEY` y `STRIPE_WEBHOOK_SECRET`. Endpoint webhook: `/api/stripe/webhook`; eventos `checkout.session.completed`, `checkout.session.async_payment_succeeded`. **Solo el webhook verificado marca cobrado**.
-4. Crear cuenta PayPal Developer; asignar `PAYPAL_CLIENT_ID`, `PAYPAL_CLIENT_SECRET`, `PAYPAL_ENV=sandbox` (cambiar a `live` únicamente después de pruebas). El callback verifica el resultado de la captura desde el servidor.
-5. Desplegar en un hosting compatible con Next.js y rutas de servidor (por ejemplo Vercel). **GitHub Pages no admite por sí solo la API ni los pagos.**
-6. Configurar las variables del hosting, el dominio HTTPS y las URLs permitidas de OAuth. Comprobar compras de prueba antes de habilitar cobros reales.
+## Personalizar
 
-## Funciones
+Edita el array `PRODUCTS` de `docs/app.js` para cambiar nombres, precios, etiquetas o descripciones. Las imágenes actuales son **ilustraciones conceptuales**, no fotografías de objetos realmente fabricados.
 
-- Portada y tarjetas responsive con catálogo de seis productos **demostrativos** (nombres y precios editables en `lib/catalog.ts`).
-- Carrito local, notas de personalización, resumen y checkout protegido por sesión.
-- Google OAuth mediante Supabase, lista privada de pedidos, seguimiento de estado, formulario de solicitud de encargos.
-- Administración en `/admin` (lista de pedidos y actualización del estado), autorizada en servidor por `ADMIN_EMAILS`.
-- Integración inicial de Stripe y PayPal, calculando el precio siempre en servidor.
+Cuando se fabriquen las primeras piezas, será recomendable reemplazar estas ilustraciones por fotos reales, medir costes de material, tiempo de impresión y mermas, y definir cómo se envían solicitudes a un adulto responsable antes de ofrecer la venta.
 
-## Pendiente antes de vender
+## Precauciones
 
-- Sustituir iconos por **fotos reales** de impresiones; contrastar costes de material, electricidad, fallos y tiempo.
-- Implementar gestión de **solicitudes personalizadas** en el panel y mejoras en la gestión de clientes, inventario, descuentos, cancelaciones/reembolsos y notificaciones.
-- Revisar políticas de privacidad, aviso legal, protección de datos de menores, derechos de desistimiento, fiscalidad y titularidad del negocio por un adulto responsable.
-- Protección antiabuso, rate limiting, notificaciones de pedidos, confirmación de email y pruebas integrales de compra/refund.
-- Revisar la integración PayPal (capturas, conciliación, estados y webhooks) y correr pruebas de seguridad y funcionamiento antes de producción.
-- El catálogo es un **MVP**, no una plataforma lista para operar pagos con estudiantes menores.
-
-**Seguridad:** nunca subir credenciales reales al repositorio público. El campo de administrador no es modificable desde el cliente. No activar pagos productivos sin validación técnica y legal.
+Pensada para una prueba con público escolar: no contiene formularios que envíen datos, no pide correo ni teléfono y no incorpora servicios analíticos. La selección de productos y notas se guarda exclusivamente en el navegador del visitante. Si evoluciona a tienda comercial con menores, revisar titularidad del comercio, privacidad, derechos de consumidores y fiscalidad antes de activar pagos.
